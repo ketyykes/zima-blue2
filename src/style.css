@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#captions {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+}
+
+.cue {
+  position: absolute;
+  left: 50%;
+  bottom: 13vh;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 2.6vh;
+  font-weight: 300;
+  letter-spacing: 0.42em;
+  opacity: 0;
+  will-change: opacity, filter, transform;
+}
+
+.cue.light {
+  color: #f4f1ea;
+  text-shadow: 0 0 1.2vh rgba(0, 20, 40, 0.45);
+}
+
+.cue.dark {
+  color: #26323c;
+  text-shadow: 0 0 1.2vh rgba(255, 250, 240, 0.5);
+}
+
+.cue.title {
+  bottom: auto;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 9vh;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.cue.title small {
+  display: block;
+  margin-top: 2.4vh;
+  font-size: 1.6vh;
+  letter-spacing: 0.8em;
+  opacity: 0.7;
+}
+
+#start {
+  position: fixed;
+  inset: 0;
+  border: 0;
+  background: #000;
+  color: #f4f1ea;
+  font-family: 'Noto Serif TC', 'Songti TC', serif;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+  transition: opacity 0.8s ease;
+}
+
+#start.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.start-title {
+  font-size: 9vh;
+  font-weight: 300;
+}
+
+.start-hint {
+  font-size: 1.6vh;
+  letter-spacing: 0.4em;
+  opacity: 0.6;
+}

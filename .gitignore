@@ -1,0 +1,26 @@
+# 相依套件
+node_modules
+
+# 建置與輸出
+dist
+out
+
+# 環境變數
+.env
+.env.*
+!.env.example
+
+# 日誌
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# 編輯器與系統檔
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.swp
+
+# Vite 快取
+.vite
